@@ -1,4 +1,5 @@
 import { Container, Text, VStack, Box, Heading, Button, Flex } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import { FaCode, FaLaptopCode, FaChalkboardTeacher } from "react-icons/fa";
 
 const Index = () => {
@@ -10,7 +11,7 @@ const Index = () => {
         <Flex direction="row" justify="space-around" width="100%">
           <Button as={Link} to="/courses" colorScheme="teal" size="lg">View Courses</Button>
         </Flex>
-        <Button colorScheme="teal" size="lg">Get Started</Button>
+        <Button as={Link} to="/get-started" colorScheme="teal" size="lg">Get Started</Button>
       </VStack>
     </Container>
   );
