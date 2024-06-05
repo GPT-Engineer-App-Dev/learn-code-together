@@ -1,4 +1,5 @@
 import { Container, Text, VStack, Box, Heading, Button, Flex } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import { FaCode, FaLaptopCode, FaChalkboardTeacher } from "react-icons/fa";
 
 const Index = () => {
@@ -8,20 +9,9 @@ const Index = () => {
         <Heading as="h1" size="2xl" textAlign="center">Welcome to CodeMaster</Heading>
         <Text fontSize="lg" textAlign="center">Your ultimate platform to learn coding online.</Text>
         <Flex direction="row" justify="space-around" width="100%">
-          <Box textAlign="center">
-            <FaCode size="3em" />
-            <Text mt={2}>Learn to Code</Text>
-          </Box>
-          <Box textAlign="center">
-            <FaLaptopCode size="3em" />
-            <Text mt={2}>Practice Projects</Text>
-          </Box>
-          <Box textAlign="center">
-            <FaChalkboardTeacher size="3em" />
-            <Text mt={2}>Expert Mentors</Text>
-          </Box>
+          <Button as={Link} to="/courses" colorScheme="teal" size="lg">View Courses</Button>
         </Flex>
-        <Button colorScheme="teal" size="lg">Get Started</Button>
+        <Button as={Link} to="/get-started" colorScheme="teal" size="lg">Get Started</Button>
       </VStack>
     </Container>
   );
